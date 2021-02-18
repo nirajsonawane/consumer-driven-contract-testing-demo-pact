@@ -1,0 +1,6 @@
+/.idea/
+/consumer-driven-contract-testing-pact.iml
+/consumer/target/
+/producer/target/
+/consumer/consumer.iml
+/producer/producer.iml
