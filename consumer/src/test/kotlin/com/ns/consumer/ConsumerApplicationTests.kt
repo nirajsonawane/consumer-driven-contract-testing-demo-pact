@@ -11,28 +11,12 @@ import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties
 @SpringBootTest
 class ConsumerApplicationTests {
 
-    @Autowired
-    lateinit var statusService: StatusService
-
-
-    @JvmField
-    @RegisterExtension
-    final val stubRunner = StubRunnerExtension()
-        .downloadStub("com.ns", "producer", "0.0.1-SNAPSHOT", "stubs")
-        .withPort(8080)
-        .stubsMode(StubRunnerProperties.StubsMode.LOCAL)
-
 
     @Test
-    fun getStatus() {
-        val status = statusService.getStatus()
-        assertEquals(status, "CREATED")
+    fun loadContext() {
+
     }
 
-    @Test
-    fun getPactStatus() {
-        val status = statusService.getPactStatus()
-        assertEquals(status, "CREATED")
-    }
+
 
 }
